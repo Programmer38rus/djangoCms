@@ -78,7 +78,7 @@ TIME_ZONE = 'Asia/Irkutsk'
 
 USE_I18N = True
 
-USE_L10N = True
+# USE_L10N = True
 
 USE_TZ = True
 
@@ -180,7 +180,7 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_video',
     'mysite',
-    'polls'
+    'polls',
 ]
 
 LANGUAGES = (

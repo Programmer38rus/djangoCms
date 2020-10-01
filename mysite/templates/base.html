@@ -32,15 +32,15 @@
         {% cms_toolbar %}
         <div class="container">
             <ul class="nav">
-                {% show_menu 0 100 100 100 %}
+                {% show_menu 0 100 100 100 'menu.html' %}
             </ul>
 
-            {% extends 'base.html' %}
 
-            {% block content %}
-                {% block polls_content %}
-                {% endblock %}
-            {% endblock content %}
+            {% block content %} {% endblock content %}
+
+            <footer>
+                {% static_placeholder 'footer' %}
+            </footer>
         </div>
         {% render_block "js" %}
     </body>
