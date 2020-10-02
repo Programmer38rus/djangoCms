@@ -181,6 +181,7 @@ INSTALLED_APPS = [
     'djangocms_video',
     'mysite',
     'polls',
+    'polls_cms_integration',
 ]
 
 LANGUAGES = (
@@ -237,3 +238,4 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
