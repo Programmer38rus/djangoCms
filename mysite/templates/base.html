@@ -1,5 +1,7 @@
 {% load cms_tags menu_tags sekizai_tags %}
 <!doctype html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <html>
     <head>
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
@@ -30,11 +32,20 @@
     </head>
     <body>
         {% cms_toolbar %}
+        <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Myfirst</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="coollapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav">
+                        <li class="nav-item active">{% show_menu 0 100 100 100 %}</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="container">
-            <ul class="nav">
-                {% show_menu 0 100 100 100 %}
-            </ul>
-
 
             {% block content %}
             {% endblock content %}

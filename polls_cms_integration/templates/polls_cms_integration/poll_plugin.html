@@ -1,6 +1,6 @@
 <h1>{{ instance.poll.question }}</h1>
 
-{#<form action="{% url 'polls:vote' instance.poll.id %}" method="post">#}
+<form action="{% url 'polls:vote' instance.poll.id %}" method="post">
     {% csrf_token %}
     <div class="form-group">
         {% for choice in instance.poll.choice_set.all %}
